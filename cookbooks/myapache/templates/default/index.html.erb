@@ -1,1 +1,8 @@
-<h1>Hello, world!</h1>
+<html>
+  <body>
+    <h1>Hello, <%= node["myapache"]["greeting"] %></h1>
+    <h2>Welcome to the <%= @site_name %> website</h2>
+    <%= node["ipaddress"] %>:<%= @port %>
+  </body>
+</html>
+
