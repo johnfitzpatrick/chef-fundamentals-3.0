@@ -4,7 +4,7 @@ run_list "role[base]", "recipe[myapache]"
 default_attributes({
   "apache" => {
     "sites" => {
-      "monopoly" => {
+      "chess" => {
         "port" => 82
       }
     }
