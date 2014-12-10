@@ -1,3 +1,5 @@
 .kitchen/
 .kitchen.local.yml
 .chef/*
+.gitignore
+.git/*
