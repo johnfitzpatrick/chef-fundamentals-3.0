@@ -2,7 +2,7 @@ name 'haproxy'
 description 'Load Balancer'
 run_list 'role[base]', 'recipe[haproxy::app_lb]', 'recipe[haproxy]'
 override_attributes({
-  'haproxy' => {
+  :haproxy => {
     'enable_default_http' => false,
     'enable_stats_socket' => true,
     'member_port' => 8080,
@@ -10,7 +10,7 @@ override_attributes({
     }
 })
 default_attributes({
-  'haproxy' => {
+  :haproxy => {
     'admin' => {
        'port' => 9091,
        'address_bind' => '0.0.0.0'

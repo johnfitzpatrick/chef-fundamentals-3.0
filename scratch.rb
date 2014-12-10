@@ -35,6 +35,9 @@ jhnftz-web2 - 54.174.38.173
 jhnftz-lb - 54.172.175.6
 
 
-knife bootstrap 54.165.14.149 --sudo -x chef -P chef -N "haweb-node1" -r "role[webserver]"
-knife bootstrap 54.174.38.173 --sudo -x chef -P chef -N "haweb-node2" -r "role[webserver]"
-knife bootstrap 54.172.175.6  --sudo -x chef -P chef -N "ha-node" -r "role[haproxy]"
+knife bootstrap 54.165.14.149 --sudo -x chef -P chef -N "mywebnode1" -r "role[haproxy-apache]"
+knife bootstrap 54.174.38.173 --sudo -x chef -P chef -N "mywebnode2" -r "role[haproxy-apache]"
+knife bootstrap 54.172.175.6  --sudo -x chef -P chef -N "myhaproxynode" -r "role[haproxy]"
+
+
+  652  knife bootstrap 54.165.14.149 --sudo -x chef -P chef -N "mywebnode1" -r "role[haproxy-apache]"
